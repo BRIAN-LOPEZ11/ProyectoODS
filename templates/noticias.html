@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inicio</title>
+    <title>Noticias</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
                 <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
                 <li><a href="{{ url_for('donaciones') }}">Donaciones</a></li>
                 <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
@@ -18,8 +19,8 @@
     </header>
 
     <main class="container">
-        <h1>Hola, bienvenido!</h1>
-
+        <h1>Noticias</h1>
+        <p>Aquí va el contenido de noticias.</p>
     </main>
 </body>
 </html>
