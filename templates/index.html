@@ -16,10 +16,23 @@
             <a href="/logout" class="logout-link">Cerrar sesión</a>
         </nav>
     </header>
+    <main class="index-container">
+        <section class="banner">
+           <img src="{{ url_for('static', filename='img/PORTADAS-CARACOL-2.png') }}" alt="ODS 13 - Acción por el clima" class="banner-img">
+        </section>
+        <section class="intro">
+           <h2>¿Qué es el <span>ODS 13</span>? 🪴</h2>
+              <p>El ODS 13 es el Objetivo de Desarrollo Sostenible Acción por el Clima, que busca tomar medidas urgentes para combatir el cambio climático y sus efectos, como fenómenos meteorológicos extremos y el aumento del nivel del mar. Esto implica integrar la acción climática en las políticas nacionales, mejorar los sistemas de alerta temprana, promover la educación sobre el clima y apoyar a los países en desarrollo para que gestionen mejor sus efectos.</p>
+        </section>
 
-    <main class="container">
-        <h1>Hola, bienvenido!</h1>
-
+        <section class="stats">
+            <h3>El cambio climático en números</h3>
+                <ul>
+                    <li>🌡️ La temperatura global ha aumentado 1.1°C desde la era preindustrial.</li>
+                    <li>🌊 El nivel del mar ha subido unos 20 cm en el último siglo.</li>
+                    <li>🔥 2023 fue el año más caluroso jamás registrado.</li>
+                </ul>
+        </section>
     </main>
 </body>
 </html>
