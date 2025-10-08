@@ -62,6 +62,22 @@ def index():
     if 'user_id' not in session:
         return redirect(url_for('login'))
     return render_template('index.html')
+@app.route('/noticias')
+def noticias():
+    return render_template('noticias.html')
+
+@app.route('/donaciones')
+def donaciones():
+    return render_template('donaciones.html')
+
+@app.route('/articulos')
+def articulos():
+    return render_template('articulos.html')
+
+@app.route('/acciones')
+def acciones():
+    return render_template('acciones.html')
+
 
 @app.route('/logout')
 def logout():
