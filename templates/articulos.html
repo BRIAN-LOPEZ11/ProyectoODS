@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articukos relacionados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+                <li><a href="{{ url_for('donaciones') }}">Donaciones</a></li>
+                <li><a href="{{ url_for('acciones') }}">Acciones para reducir el cambio climático</a></li>
+            </ul>
+            <a href="/logout" class="logout-link">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Articulos relacionados</h1>
+        <p>CONTENIDO</p>
+    </main>
+</body>
+</html>
