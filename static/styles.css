@@ -181,18 +181,61 @@ a:hover {
 
 .stats{
     margin-top: 0;
+    text-align: left;
+}
+
+.stats h3{
+    text-align: left;
+    margin-left: 20px;
+}
+.stats p{
+    text-align: left;
+    margin-left: 20px;
+}
+.stats-img {
+    width: 100%;
+    max-width: 800px; 
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px; 
+}
+
+.Quehacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+}
+.ciudades h3, p{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.stats ul {
-    list-style: none;
-    padding: 0;
+.juventud h3,p{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.stats li {
-    margin: 10px 0;
+.btn-acciones {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
     font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
+
+.btn-acciones:hover {
+    background-color: #45a049;
+}
+
 
 .banner-img {
     display: block;    
@@ -202,6 +245,31 @@ a:hover {
     height: 400px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer p {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+
+
 
 @media (max-width: 600px) {
     .nav-menu {

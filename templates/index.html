@@ -26,13 +26,47 @@
         </section>
 
         <section class="stats">
-            <h3>El cambio climático en números</h3>
-                <ul>
-                    <li>🌡️ La temperatura global ha aumentado 1.1°C desde la era preindustrial.</li>
-                    <li>🌊 El nivel del mar ha subido unos 20 cm en el último siglo.</li>
-                    <li>🔥 2023 fue el año más caluroso jamás registrado.</li>
-                </ul>
+            <h3>¿Lo has notado?</h3>
+            <p>En las últimas décadas, la temperatura global ha experimentado un aumento notable debido al cambio climático. Según los datos de la NASA y la NOAA (Administración Nacional Oceánica y Atmosférica de EE.UU.), la temperatura global ha aumentado aproximadamente 1.1°C desde la era preindustrial (finales del siglo XIX). Aunque puede parecer una cifra pequeña, este incremento tiene implicaciones profundas para el clima global, los ecosistemas y la vida humana.
+
+Los registros de temperatura muestran que los años más cálidos de la historia reciente han ocurrido desde principios del siglo XXI. De hecho, 2023 fue el año más caluroso registrado hasta la fecha, con temperaturas promedio globales que superaron incluso las de años anteriores, como 2016, que anteriormente ostentaba el récord. Este calentamiento no ha sido uniforme; algunas regiones, como el Ártico, han experimentado aumentos de temperatura mucho mayores, lo que contribuye al derretimiento del hielo marino y al aumento del nivel del mar.
+
+El aumento de la temperatura global está relacionado con el efecto invernadero, donde gases como el dióxido de carbono (CO₂), metano (CH₄) y óxidos de nitrógeno atrapan el calor en la atmósfera, impidiendo que se escape al espacio. Estos gases provienen principalmente de actividades humanas, como la quema de combustibles fósiles (carbón, petróleo, gas), la deforestación y la agricultura industrial.
+
+Este aumento de la temperatura está generando una serie de efectos en el planeta:
+
+Fenómenos meteorológicos extremos: Olas de calor más frecuentes y severas, tormentas más intensas, sequías prolongadas e inundaciones repentinas.
+
+Desplazamiento de ecosistemas: Muchas especies animales y vegetales están teniendo que adaptarse o desplazarse debido a cambios en sus hábitats naturales.
+
+Impacto en la salud humana: El calor extremo aumenta el riesgo de enfermedades relacionadas con el calor, como golpes de calor, enfermedades respiratorias y cardiovasculares.
+
+Para mitigar estos efectos, es crucial reducir las emisiones de gases de efecto invernadero y tomar medidas urgentes para frenar el calentamiento global, tal como lo establece el Objetivo de Desarrollo Sostenible (ODS) 13: Acción por el Clima. Si no se toman medidas significativas, los efectos del cambio climático seguirán intensificándose, con consecuencias graves para todos los aspectos de la vida en la Tierra.</p>
+          <img src="{{ url_for('static', filename='img/cambioc.webp') }}" alt="Efectos del cambio climático" class="stats-img">
         </section>
+        <section class="Quehacer">
+            <h3>¿Qué hacer?</h3>
+             <p>El cambio climático requiere de la acción de todos. Si deseas saber más sobre cómo puedes contribuir a reducir el impacto ambiental y qué medidas puedes tomar para combatir el cambio climático, te invitamos a explorar nuestras **acciones por el clima**. ¡Haz clic en el enlace y descubre cómo puedes marcar la diferencia!</p>
+             <a href="{{ url_for('acciones') }}" class="btn-acciones">Explorar Acciones por el Clima</a>
+
+        </section>
+        <section class="ciudades">
+            <h3>Ciudades sostenibles: una meta alcanzable</h3>
+            <p>Más del 55% de la población mundial vive en ciudades, lo que convierte a los entornos urbanos en actores clave para combatir el cambio climático. A través de transporte público eficiente, zonas verdes, energías limpias y diseño urbano sostenible, las ciudades pueden reducir su huella de carbono y mejorar la calidad de vida de sus habitantes.</p>
+            <img src="{{ url_for('static', filename='img/ciudad-sostenible-1.jpg') }}" alt="Ciudades sostenibles" class="stats-img">
+        </section>
+        <section class="juventud">
+            <h3>El rol de los jóvenes en la lucha climática</h3>
+            <p>Los jóvenes están liderando el movimiento climático a nivel global. A través de protestas pacíficas, activismo en redes sociales y propuestas innovadoras, la juventud ha demostrado que tiene un papel fundamental en exigir acciones concretas y en crear soluciones sostenibles. Su voz es poderosa y necesaria para cambiar el rumbo del planeta.</p>
+            <img src="{{ url_for('static', filename='img/juventud.webp') }}" alt="Jóvenes por el clima" class="stats-img">
+        </section>
+
+
     </main>
 </body>
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025, Todos los derechos reservados.</p>
+    </div>
+</footer>
 </html>
