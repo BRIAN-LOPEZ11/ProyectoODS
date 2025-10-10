@@ -300,6 +300,64 @@ a:hover {
     text-decoration: underline;
 }
 
+.articulosrelacionados {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f0f8ff; /* un azul muy claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.articulosrelacionados h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #006400; /* verde oscuro */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.articulosrelacionados article {
+  background-color: white;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #228B22; /* un verde brillante */
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+}
+
+.articulosrelacionados article:hover {
+  box-shadow: 0 0 10px rgba(34, 139, 34, 0.3);
+}
+
+.articulosrelacionados article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2e8b57; /* verde medio */
+}
+
+.articulosrelacionados article p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.articulosrelacionados article a {
+  color: #1e90ff; /* azul dodger */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.articulosrelacionados article a:hover {
+  color: #104e8b; /* azul más oscuro */
+  text-decoration: underline;
+}
+
+
 
 .footer {
     background-color: #333;
