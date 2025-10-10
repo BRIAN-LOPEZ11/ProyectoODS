@@ -245,6 +245,61 @@ a:hover {
     height: 400px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.ultimasnoticias {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ultimasnoticias h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #2e7d32;
+}
+
+.noticia {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.noticia-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.noticia-contenido {
+    flex: 1;
+}
+
+.noticia h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.fecha {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.leer-mas {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.leer-mas:hover {
+    text-decoration: underline;
+}
+
 
 .footer {
     background-color: #333;
