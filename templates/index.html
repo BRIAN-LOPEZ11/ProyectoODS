@@ -1,72 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Inicio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | ODS 13 - Acción por el Clima</title>
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+  crossorigin="anonymous"
+/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
-                <li><a href="{{ url_for('donaciones') }}">Donaciones</a></li>
-                <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
-                <li><a href="{{ url_for('acciones') }}">Acciones para reducir el cambio climático</a></li>
-            </ul>
-            <a href="/logout" class="logout-link">Cerrar sesión</a>
-        </nav>
-    </header>
-    <main class="index-container">
-        <section class="banner">
-           <img src="{{ url_for('static', filename='img/PORTADAS-CARACOL-2.png') }}" alt="ODS 13 - Acción por el clima" class="banner-img">
-        </section>
-        <section class="intro">
-           <h2>¿Qué es el <span>ODS 13</span>? 🪴</h2>
-              <p>El ODS 13 es el Objetivo de Desarrollo Sostenible Acción por el Clima, que busca tomar medidas urgentes para combatir el cambio climático y sus efectos, como fenómenos meteorológicos extremos y el aumento del nivel del mar. Esto implica integrar la acción climática en las políticas nacionales, mejorar los sistemas de alerta temprana, promover la educación sobre el clima y apoyar a los países en desarrollo para que gestionen mejor sus efectos.</p>
-        </section>
-
-        <section class="stats">
-            <h3>¿Lo has notado?</h3>
-            <p>En las últimas décadas, la temperatura global ha experimentado un aumento notable debido al cambio climático. Según los datos de la NASA y la NOAA (Administración Nacional Oceánica y Atmosférica de EE.UU.), la temperatura global ha aumentado aproximadamente 1.1°C desde la era preindustrial (finales del siglo XIX). Aunque puede parecer una cifra pequeña, este incremento tiene implicaciones profundas para el clima global, los ecosistemas y la vida humana.
-
-Los registros de temperatura muestran que los años más cálidos de la historia reciente han ocurrido desde principios del siglo XXI. De hecho, 2023 fue el año más caluroso registrado hasta la fecha, con temperaturas promedio globales que superaron incluso las de años anteriores, como 2016, que anteriormente ostentaba el récord. Este calentamiento no ha sido uniforme; algunas regiones, como el Ártico, han experimentado aumentos de temperatura mucho mayores, lo que contribuye al derretimiento del hielo marino y al aumento del nivel del mar.
-
-El aumento de la temperatura global está relacionado con el efecto invernadero, donde gases como el dióxido de carbono (CO₂), metano (CH₄) y óxidos de nitrógeno atrapan el calor en la atmósfera, impidiendo que se escape al espacio. Estos gases provienen principalmente de actividades humanas, como la quema de combustibles fósiles (carbón, petróleo, gas), la deforestación y la agricultura industrial.
-
-Este aumento de la temperatura está generando una serie de efectos en el planeta:
-
-Fenómenos meteorológicos extremos: Olas de calor más frecuentes y severas, tormentas más intensas, sequías prolongadas e inundaciones repentinas.
-
-Desplazamiento de ecosistemas: Muchas especies animales y vegetales están teniendo que adaptarse o desplazarse debido a cambios en sus hábitats naturales.
-
-Impacto en la salud humana: El calor extremo aumenta el riesgo de enfermedades relacionadas con el calor, como golpes de calor, enfermedades respiratorias y cardiovasculares.
-
-Para mitigar estos efectos, es crucial reducir las emisiones de gases de efecto invernadero y tomar medidas urgentes para frenar el calentamiento global, tal como lo establece el Objetivo de Desarrollo Sostenible (ODS) 13: Acción por el Clima. Si no se toman medidas significativas, los efectos del cambio climático seguirán intensificándose, con consecuencias graves para todos los aspectos de la vida en la Tierra.</p>
-          <img src="{{ url_for('static', filename='img/cambioc.webp') }}" alt="Efectos del cambio climático" class="stats-img">
-        </section>
-        <section class="Quehacer">
-            <h3>¿Qué hacer?</h3>
-             <p>El cambio climático requiere de la acción de todos. Si deseas saber más sobre cómo puedes contribuir a reducir el impacto ambiental y qué medidas puedes tomar para combatir el cambio climático, te invitamos a explorar nuestras **acciones por el clima**. ¡Haz clic en el enlace y descubre cómo puedes marcar la diferencia!</p>
-             <a href="{{ url_for('acciones') }}" class="btn-acciones">Explorar Acciones por el Clima</a>
-
-        </section>
-        <section class="ciudades">
-            <h3>Ciudades sostenibles: una meta alcanzable</h3>
-            <p>Más del 55% de la población mundial vive en ciudades, lo que convierte a los entornos urbanos en actores clave para combatir el cambio climático. A través de transporte público eficiente, zonas verdes, energías limpias y diseño urbano sostenible, las ciudades pueden reducir su huella de carbono y mejorar la calidad de vida de sus habitantes.</p>
-            <img src="{{ url_for('static', filename='img/ciudad-sostenible-1.jpg') }}" alt="Ciudades sostenibles" class="stats-img">
-        </section>
-        <section class="juventud">
-            <h3>El rol de los jóvenes en la lucha climática</h3>
-            <p>Los jóvenes están liderando el movimiento climático a nivel global. A través de protestas pacíficas, activismo en redes sociales y propuestas innovadoras, la juventud ha demostrado que tiene un papel fundamental en exigir acciones concretas y en crear soluciones sostenibles. Su voz es poderosa y necesaria para cambiar el rumbo del planeta.</p>
-            <img src="{{ url_for('static', filename='img/juventud.webp') }}" alt="Jóvenes por el clima" class="stats-img">
-        </section>
+ <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">🌍 ODS 13</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+            <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
+            <li><a href="{{ url_for('acciones') }}">Acciones climáticas</a></li>
+            <li><a href="{{ url_for('donaciones')}}">Donaciones</a></li>
+        </ul>
+        <a href="/logout" class="logout-btn">
+            <span>Cerrar sesión</span>
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </nav>
+</header>
 
 
-    </main>
-</body>
-<footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025, Todos los derechos reservados.</p>
+  <main class="index-container">
+    <!-- Banner principal -->
+<section class="banner">
+    <img src="{{ url_for('static', filename='img/PORTADAS-CARACOL-2.png') }}" 
+         alt="ODS 13 - Acción por el clima" class="banner-img">
+    <div class="banner-overlay"></div>
+    <div class="banner-text">
+        <h1>Bienvenido</h1>
+        <p>Comprometidos con el ODS 13: Acción por el Clima</p>
     </div>
+</section>
+
+    <!-- Introducción -->
+    <section class="intro">
+      <h2>¿Qué es el <span>ODS 13</span>? 🪴</h2>
+      <p>
+        El ODS 13 busca tomar medidas urgentes para combatir el cambio climático y sus efectos,
+        como fenómenos meteorológicos extremos y el aumento del nivel del mar. Promueve la acción
+        climática en políticas nacionales, educación ambiental y apoyo internacional a países en desarrollo.
+      </p>
+    </section>
+
+    <!-- Datos y contexto -->
+    <section class="stats">
+      <h3>¿Lo has notado?</h3>
+      <p>
+        La temperatura global ha aumentado aproximadamente 1.1°C desde la era preindustrial,
+        afectando ecosistemas, economías y la salud humana. Este incremento se debe principalmente
+        a la quema de combustibles fósiles y la deforestación.
+      </p>
+      <p>
+        Los años más cálidos registrados han ocurrido en el siglo XXI. Si no actuamos pronto,
+        las consecuencias del cambio climático seguirán intensificándose con efectos graves
+        en todo el planeta.
+      </p>
+      <img src="{{ url_for('static', filename='img/cambioc.webp') }}" 
+           alt="Efectos del cambio climático" 
+           class="stats-img">
+    </section>
+
+    <!-- Qué hacer -->
+    <section class="Quehacer">
+      <h3>¿Qué hacer?</h3>
+      <p>
+        El cambio climático requiere la acción de todos. Descubre cómo puedes contribuir
+        con pequeñas acciones cotidianas que generan un gran impacto ambiental.
+      </p>
+      <a href="{{ url_for('acciones') }}" class="btn-acciones">Explorar Acciones por el Clima</a>
+    </section>
+
+    <!-- Ciudades sostenibles -->
+    <section class="ciudades">
+      <h3>Ciudades sostenibles: una meta alcanzable</h3>
+      <p>
+        Más del 55% de la población mundial vive en ciudades. A través de transporte público,
+        energías limpias y diseño urbano sostenible, podemos reducir la huella de carbono
+        y mejorar la calidad de vida urbana.
+      </p>
+      <img src="{{ url_for('static', filename='img/ciudad-sostenible-1.jpg') }}" 
+           alt="Ciudades sostenibles" 
+           class="stats-img">
+    </section>
+
+    <!-- Juventud -->
+    <section class="juventud">
+      <h3>El rol de los jóvenes en la lucha climática</h3>
+      <p>
+        Los jóvenes son protagonistas del cambio: impulsan movimientos globales, promueven
+        educación ambiental y exigen acciones reales. Su compromiso es esencial para
+        construir un futuro sostenible.
+      </p>
+      <img src="{{ url_for('static', filename='img/juventud.webp') }}" 
+           alt="Jóvenes por el clima" 
+           class="stats-img">
+    </section>
+  </main>
+
+<footer class="footer">
+  <p>&copy; 2025 | Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="https://x.com/ONU_es" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.instagram.com/nacionesunidas" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  </div>
 </footer>
+</body>
 </html>

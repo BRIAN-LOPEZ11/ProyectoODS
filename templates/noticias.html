@@ -2,20 +2,32 @@
 <html>
 <head>
     <title>Noticias</title>
+    <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+  crossorigin="anonymous"
+/>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="{{ url_for('index') }}">Inicio</a></li>
-                <li><a href="{{ url_for('donaciones') }}">Donaciones</a></li>
-                <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
-                <li><a href="{{ url_for('acciones') }}">Acciones para reducir el cambio climático</a></li>
-            </ul>
-            <a href="/logout" class="logout-link">Cerrar sesión</a>
-        </nav>
-    </header>
+ <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">🌍 ODS 13</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+            <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
+            <li><a href="{{ url_for('acciones') }}">Acciones climáticas</a></li>
+            <li><a href="{{ url_for('donaciones')}}">Donaciones</a></li>
+        </ul>
+        <a href="/logout" class="logout-btn">
+            <span>Cerrar sesión</span>
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </nav>
+</header>
 
     <main class="index-container">
         <section class="ultimasnoticias">
@@ -27,7 +39,6 @@
         <h3>Incendios forestales arrasan regiones del sur de Europa</h3>
         <p class="fecha">10 de octubre de 2025</p>
         <p>Las altas temperaturas y la sequía prolongada han provocado una serie de incendios forestales en España, Grecia e Italia. Miles de hectáreas han sido consumidas por el fuego, forzando evacuaciones masivas.</p>
-        <a href="#" class="leer-mas">Leer más</a>
     </div>
 </article>
 
@@ -37,7 +48,6 @@
         <h3>2025: otro año con temperaturas récord</h3>
         <p class="fecha">8 de octubre de 2025</p>
         <p>La Organización Meteorológica Mundial confirma que 2025 podría cerrar como uno de los años más calurosos desde que se tiene registro, destacando la necesidad urgente de reducir las emisiones de gases de efecto invernadero.</p>
-        <a href="#" class="leer-mas">Leer más</a>
     </div>
 </article>
 
@@ -47,7 +57,6 @@
         <h3>Resultados de la Cumbre Climática Global en Dubái</h3>
         <p class="fecha">5 de octubre de 2025</p>
         <p>Líderes de más de 190 países se reunieron para definir nuevas metas ambientales. Se acordó acelerar la transición energética y se establecieron compromisos financieros para países vulnerables.</p>
-        <a href="#" class="leer-mas">Leer más</a>
     </div>
 </article>
 <article class="noticia">
@@ -56,7 +65,6 @@
         <h3>El deshielo en la Antártida se acelera más de lo previsto</h3>
         <p class="fecha">4 de octubre de 2025</p>
         <p>Un nuevo estudio satelital muestra que el ritmo de derretimiento de los glaciares antárticos ha aumentado un 60% en la última década, lo que podría provocar un aumento considerable del nivel del mar en las próximas décadas.</p>
-        <a href="#" class="leer-mas">Leer más</a>
     </div>
 </article>
 <article class="noticia">
@@ -65,7 +73,6 @@
         <h3>Países latinoamericanos aprueban histórica ley ambiental</h3>
         <p class="fecha">2 de octubre de 2025</p>
         <p>Una coalición de países sudamericanos ha aprobado una legislación conjunta para proteger los bosques amazónicos, combatir la deforestación y garantizar los derechos de las comunidades indígenas.</p>
-        <a href="#" class="leer-mas">Leer más</a>
     </div>
 </article>
 <article class="noticia">
@@ -74,7 +81,6 @@
         <h3>Millones marchan por el clima en todo el mundo</h3>
         <p class="fecha">29 de septiembre de 2025</p>
         <p>Más de 25 millones de personas salieron a las calles en diferentes países para exigir acciones urgentes contra el cambio climático, en la que se considera la mayor manifestación ambiental global de la historia.</p>
-        <a href="#" class="leer-mas">Leer más</a>
     </div>
 </article>
 
@@ -83,8 +89,10 @@
     </main>
 </body>
 <footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025, Todos los derechos reservados.</p>
-    </div>
+  <p>&copy; 2025 | Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="https://x.com/ONU_es" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.instagram.com/nacionesunidas" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  </div>
 </footer>
 </html>

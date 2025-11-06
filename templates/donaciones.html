@@ -1,30 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Donaciones</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+  crossorigin="anonymous"
+/>
+    <script src="https://www.paypal.com/sdk/js?client-id=AcZ6AoWPZY5LoWIXfEwCUWzIkMpxmFvIekB2SU-OGxXSeAqokDl-IH4H1IQ7JU_-98NOF1EBKHF72keR&currency=MXN"></script> 
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="{{ url_for('index') }}">Inicio</a></li>
-                <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
-                <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
-                <li><a href="{{ url_for('acciones') }}">Acciones para reducir el cambio climático</a></li>
-            </ul>
-            <a href="/logout" class="logout-link">Cerrar sesión</a>
-        </nav>
-    </header>
+<body class="donaciones-body">
+ <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">🌍 ODS 13</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+            <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
+            <li><a href="{{ url_for('acciones') }}">Acciones climáticas</a></li>
+            <li><a href="{{ url_for('donaciones')}}">Donaciones</a></li>
+        </ul>
+        <a href="/logout" class="logout-btn">
+            <span>Cerrar sesión</span>
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </nav>
+</header>
 
     <main class="container">
         <h1>Donaciones</h1>
-        <p>CONTENIDO</p>
+        <p>Apoya a la protección del medio ambiente.</p>
+
+        <!-- Aquí aparecerá el botón -->
+        <div id="paypal-button-container"></div>
     </main>
+
+
+    <!-- Script para inicializar el botón -->
+    <script>
+        paypal.Buttons({
+            style: {
+                color: 'gold',
+                shape: 'rect',
+                label: 'donate',
+                layout: 'vertical'
+            },
+            // Crea la orden (puedes cambiar el monto)
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '100.00', // 💰 Monto en MXN
+                            currency_code: 'MXN'
+                        },
+                        description: 'Donación al proyecto ecológico'
+                    }]
+                });
+            },
+            // Cuando el pago se aprueba
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Gracias por tu donación, ' + details.payer.name.given_name + ' ❤️');
+                    // Aquí puedes enviar los datos al servidor Flask si quieres registrarlo
+                });
+            },
+            // Manejo de errores
+            onError: function(err) {
+                console.error(err);
+                alert('Ocurrió un error con el pago.');
+            }
+        }).render('#paypal-button-container');
+    </script>
 </body>
 <footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025, Todos los derechos reservados.</p>
-    </div>
+  <p>&copy; 2025 | Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="https://x.com/ONU_es" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.instagram.com/nacionesunidas" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  </div>
 </footer>
+
 </html>

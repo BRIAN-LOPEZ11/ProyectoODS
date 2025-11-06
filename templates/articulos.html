@@ -2,22 +2,34 @@
 <html>
 <head>
     <title>Artículos relacionados</title>
+    <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+  crossorigin="anonymous"
+/>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="{{ url_for('index') }}">Inicio</a></li>
-                <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
-                <li><a href="{{ url_for('donaciones') }}">Donaciones</a></li>
-                <li><a href="{{ url_for('acciones') }}">Acciones para reducir el cambio climático</a></li>
-            </ul>
-            <a href="/logout" class="logout-link">Cerrar sesión</a>
-        </nav>
-    </header>
+ <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">🌍 ODS 13</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+            <li><a href="{{ url_for('articulos') }}">Artículos</a></li>
+            <li><a href="{{ url_for('acciones') }}">Acciones climáticas</a></li>
+            <li><a href="{{ url_for('donaciones')}}">Donaciones</a></li>
+        </ul>
+        <a href="/logout" class="logout-btn">
+            <span>Cerrar sesión</span>
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </nav>
+</header>
 
-    <main class="index-container">
+    <main class="articulos-page">
         <section class="articulosrelacionados">
     <h2>Acción por el Clima: ODS 13</h2>
     
@@ -50,8 +62,10 @@
 </body>
 
 <footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025, Todos los derechos reservados.</p>
-    </div>
+  <p>&copy; 2025 | Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="https://x.com/ONU_es" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.instagram.com/nacionesunidas" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  </div>
 </footer>
 </html>
