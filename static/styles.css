@@ -160,7 +160,7 @@ header {
 }
 
 .banner-text h1 {
-    color: black;
+    color: white;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -170,7 +170,7 @@ header {
 }
 
 .banner-text p {
-    color: black;
+    color: white;
     font-size: 1.3rem;
     font-weight: 400;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
